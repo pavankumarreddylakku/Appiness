@@ -7,8 +7,8 @@ const sider = () => {
 return(
 <Sider className="sidenav" style={{ width: "220px !important" }}>
     <Menu theme="dark" defaultSelectedKeys={['1']} style={{ backgroundColor: "#f2f4f6" }}>
-        <Menu.Item key="1" >
-                <Link to="/" className="menuItem">Profile Details</Link>
+        <Menu.Item key="1">
+            <Link to="/" className="menuItem">Profile Details</Link>
         </Menu.Item>
             <Menu.Item key="2">
                 <Link to="/details" className="menuItem">Use Case Details</Link>
