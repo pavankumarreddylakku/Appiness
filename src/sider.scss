@@ -1,10 +1,19 @@
 .menuItem{
     color:#999999 !important;
 }
-.ant-menu{
-.ant-menu-item-selected{
-    .menuItem{
-    color:#fff !important;
-    }
+.ant-menu-item-selected {
+  background-color: #f2f4f6 !important;
+  .menuItem{
+    font-family: Roboto !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-stretch: normal !important;
+    font-style: normal !important;
+    letter-spacing: normal !important;
+    text-align: left !important;
+    
+  }
 }
-}
+ .menuItem{
+   color: #222222 !important;
+ }
