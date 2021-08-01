@@ -5,8 +5,8 @@ import "./sider.scss"
 const { Header, Footer, Sider, Content } = Layout;
 const sider = () => {
 return(
-<Sider className="sidenav" style={{ width: "220px !important" }}>
-    <Menu theme="dark" defaultSelectedKeys={['1']} style={{ backgroundColor: "#f2f4f6" }}>
+<Sider className="sidenav">
+        <Menu theme="dark" defaultSelectedKeys={['1']} className="menudiv">
         <Menu.Item key="1">
             <Link to="/" className="menuItem">Profile Details</Link>
         </Menu.Item>

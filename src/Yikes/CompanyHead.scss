@@ -1,4 +1,10 @@
 .group {
+  background-color: #002639 !important;
+  width: 1349px;
+  height: 60px;
+  margin: 0 0 1px;
+  padding: 9px 25px 8.5px 25px;
+  box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.16);
 .menu-icon{
     width: 15.3px;
     height: 12.9px;
@@ -77,4 +83,7 @@ margin: 6px 0px;
   float:right;
   color:#fff;
 }
+/* .profilePic{
+  margin-right: 10px;
+} */
 }
