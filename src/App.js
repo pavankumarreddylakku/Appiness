@@ -1,28 +1,28 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Login from "./Login";
+/* import Login from "./Login";
 import Dashboard from "./Dashboard";
 import Parent from "./Task";
 import { useSelector,useDispatch } from "react-redux";
-import { Increment,Decrement } from "./Actions/actions";
-import Profile from "./Profile";
-import CompanyHeader from "./CompanyHeader";
-import Sider from "./sider";
-import Price from "./price";
-import Workflow from "./workflow";
+import { Increment,Decrement } from "./Actions/actions"; */
+import Profile from "./Yikes/Profile";
+import CompanyHeader from "./Yikes/CompanyHeader";
+import Sider from "./Yikes/sider";
+import Price from "./Yikes/price";
+import Workflow from "./Yikes/workflow";
 import { Layout, Menu, Row, Col, Upload, Input, Avatar, Select } from 'antd';
-import Market from "./market";
-import Details from "./details";
+import Market from "./Yikes/market";
+import Details from "./Yikes/details";
+import "antd/dist/antd.css";
 function App() {
-  const counter = useSelector(state => { 
+  /* const counter = useSelector(state => { 
     console.log(state,"state");
     return state
   });
-  const add = useDispatch();
+  const add = useDispatch(); */
   return (
     <div className="App">
-      
       <Router>
         <CompanyHeader />
         <Layout>

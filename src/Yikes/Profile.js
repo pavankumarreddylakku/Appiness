@@ -1,11 +1,15 @@
 import React,{useState,useEffect} from "react";
-import { Layout, Menu, Row, Col, Upload, Input, Avatar, Select } from 'antd';
-import { MenuOutlined, UserOutlined, PlusOutlined, BellOutlined } from '@ant-design/icons';
+import { Layout, Menu, Row, Col, Upload, Input, Select } from 'antd';
+import { UserOutlined, PlusOutlined } from '@ant-design/icons';
+import UserIcon from "./Icons/user-o.svg";
+import ProfessionalIcon from "./Icons/temp-svg.svg";
+import EducationIcon from "./Icons/path-17655.svg";
+import CertificateIcon from "./Icons/group-19787.svg";
 import "./prof.scss"
 import axios from "axios";
-const { Header, Footer, Sider, Content } = Layout;
-const { SubMenu } = Menu;
-const { TextArea, Search } = Input;
+const {Content } = Layout;
+
+const { TextArea} = Input;
 const { Option } = Select;
 
 const Profile = () => {
@@ -22,11 +26,11 @@ const Profile = () => {
                         <p className="profilehead">Profile Details</p>
                     </div>
                     <div className="uploadParent">
-                        <UserOutlined className="uploadImg"/>
-                        <span className="Personal-Information">Personal Information</span>
+                     <img src={UserIcon} className="uploadImg"/>
+                        <span className="Personal-Information">Key Personal Information</span>
                     </div>
-                    <div style={{paddingLeft:"24px"}}>
-                            <Row style={{padding:"24px 0px"}}>
+                    <div className="uploadDiv">
+                            <Row className="uploadRow">
                                 <Col>
                                     <Upload
                                         name="avatar"
@@ -40,9 +44,9 @@ const Profile = () => {
                                     </Upload>
                                     
                                 </Col>
-                                <div style={{padding:"20px 0px 0px 20px"}}>
+                                <div className="UploadContent">
                                      <p className="Upload-Profile-Pic">Upload profile pic</p>
-                                     <p><a style={{paddingRight:"4px"}}>Click here</a>to choose a file</p>
+                                     <p><a className="ClickSty">Click here</a>to choose a file</p>
                                 </div>
                             </Row>
                             <Row className="rowSty">
@@ -52,18 +56,17 @@ const Profile = () => {
                                 </Col>
                             </Row>
                             <Row className="rowSty">
-                                <Col span={14} style={{width:"640px"}}>
+                         <Col span={14} className="Biorow">
                                     <p className="inputName">Bio<span className="star">*</span></p>
                                     <TextArea placeholder="Type Here" rows={3} />
                                 </Col>
                             </Row>
-                            <Row className="rowSty">
+                            <Row className="rowStyle">
                                 <Col span={7}>
                                     <p className="inputName">Cost per hour<span className="star">*</span></p>
                                     <Select
                                         placeholder="Select a person"
                                         optionFilterProp="children"
-                                        style={{width:"309px"}}
                                     >
                                         <Option value="jack">Jack</Option>
                                         <Option value="lucy">Lucy</Option>
@@ -80,9 +83,10 @@ const Profile = () => {
                                 </Col>
                             </Row>
                             <Row className="rowSty">
-                                <h2>Professional information</h2>
+                                <img src={ProfessionalIcon} className="uploadImg" />
+                                <h2 className="professional">Professional information</h2>
                             </Row>
-                            <Row className="rowSty">
+                            <Row className="rowStyle">
                                 <Col span={7}>
                                     <p className="inputName">Company Name</p>
                                     <Input placeholder="Type Here" className="inputSty" />
@@ -100,6 +104,31 @@ const Profile = () => {
                                 </Col>
                             </Row>
                             <Row className="rowSty">
+                                <img src={EducationIcon} className="uploadImg" />
+                                <h2 className="professional">Education information</h2>
+                            </Row>
+                            <Row className="rowStyle">
+                                <Col span={7}>
+                                    <p className="inputName">School/Degree<span className="star">*</span></p>
+                                    <Input placeholder="Type Here" className="inputSty" />
+                                </Col>
+                                <Col span={7} className="colSty">
+                                    <p className="inputName">Field of study</p>
+                                    <Input placeholder="Type Here" className="inputSty" />
+                                </Col>
+                                <Col span={7} className="colSty">
+                                    <p className="inputName">Study Period</p>
+                                    <Input placeholder="Type Here" className="inputSty" />
+                                </Col>
+                                <Col span={2} className="colSty">
+                                    <button className="Add-More">Add more</button>
+                                </Col>
+                            </Row>
+                            <Row className="rowSty">
+                                <img src={CertificateIcon} className="uploadImg" />
+                                <h2 className="professional">certifications</h2>
+                            </Row>
+                            <Row className="rowStyle">
                                 <Col span={7}>
                                     <p className="inputName">Industry Certification </p>
                                     <Input className="inputSty" placeholder="Type Here" />
@@ -119,17 +148,18 @@ const Profile = () => {
                                     </Select>
                                 </Col>
                             </Row>
+                 </div>        
                             <Row className="rowbutton">
                                 <Col offset={19} >
                                 </Col>
-                                <Col  style={{ margin: "0px 10px 0px 36px" }}>
+                                <Col className="CancelCol">
                                     <button className="cancel-More">Cancel</button>
                                 </Col>
                                 <Col  className="colSty">
                                     <button className="continue-More">Continue</button>
                                 </Col>
                             </Row>
-                    </div>
+                    
                 </Content>
                 </Layout>
                 
