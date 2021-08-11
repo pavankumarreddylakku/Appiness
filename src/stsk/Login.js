@@ -5,7 +5,6 @@ import { UserOutlined } from '@ant-design/icons';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import "antd/dist/antd.css";
 import "./Login.css"
-import human from "./human_jump.jpg"
 import { Row, Col } from 'antd';
 const Login = () => {
     const [disable1,setDisable] = useState(true);
@@ -38,11 +37,8 @@ const Login = () => {
     console.log(disable1,'disable1');
     return (
         <div><div style={{ margin: "50px auto", padding: "50px 75px", backgroundColor: "#f6fbfd", height: "300px", width: "450px", borderRadius: "10px"}}>
-            <Row>
-            <Col span={12}>
-            <img src={human} alt="human" style={{width:"100px"}}/>
-            </Col>
-            <Col span={12}>
+        <Row>
+        <Col span={24}>
         <h2>USER LOGIN</h2>
         <Input size="large" name="username" onChange={onChange1} placeholder="enter username" prefix={<UserOutlined />} allowClear/>
         <br />

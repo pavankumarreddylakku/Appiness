@@ -1,9 +1,9 @@
 //import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-/* import Login from "./Login";
-import Dashboard from "./Dashboard";
-import Parent from "./Task";
+import Login from "./stsk/Login";
+import Dashboard from "./stsk/Dashboard";
+/* import Parent from "./Task";
 import { useSelector,useDispatch } from "react-redux";
 import { Increment,Decrement } from "./Actions/actions"; */
 import Profile from "./Yikes/Profile";
@@ -14,6 +14,7 @@ import Workflow from "./Yikes/workflow";
 import { Layout, Menu, Row, Col, Upload, Input, Avatar, Select } from 'antd';
 import Market from "./Yikes/market";
 import Details from "./Yikes/details";
+import Apicall from "./Apicall";
 import "antd/dist/antd.css";
 function App() {
   /* const counter = useSelector(state => { 
@@ -21,9 +22,18 @@ function App() {
     return state
   });
   const add = useDispatch(); */
+ 
   return (
     <div className="App">
       <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/dashboard" component={Dashboard} />
+        </Switch>
+      </Router>
+
+      {/* <Apicall /> */}
+      {/* <Router>
         <CompanyHeader />
         <Layout>
            <Sider />
@@ -35,7 +45,7 @@ function App() {
             <Route exact path="/" component={Profile} />
           </Switch>
         </Layout>
-      </Router>,
+      </Router>, */}
     </div>
   );
 }
